@@ -1,6 +1,7 @@
-#ifdef LIBFUNC
+#ifndef LIBFUNC
 #define LIBFUNC
 #endif
+
 
 #include "stdio.h"
 #include "allegro.h"
@@ -16,17 +17,8 @@ typedef struct {
   int pos_x, pos_y, estado, id;
 }Base;
 
+
 Base base[3][3];
 
 
-
-volatile int ticks;
-
-
-void fechar_programa(int exit_program);
-
-void incrementa_ticks();
-
 void escreverMatriz(int i, int u);
-
-void imprimirObjetos();

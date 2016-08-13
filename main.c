@@ -8,8 +8,20 @@
 #include <stdio.h>
 #include "lib/libfunc.h"
 
+
 volatile int exit_program = FALSE;
 
+volatile int ticks;
+
+void fechar_programa() {
+  exit_program = TRUE;
+}
+END_OF_FUNCTION(fechar_programa);
+
+void incrementa_ticks() {
+  ticks++;
+}
+END_OF_FUNCTION(incrementa_ticks);
 
 int main() {
 
@@ -247,7 +259,7 @@ int main() {
 
 
       textout_right(buffer, font, "Build by Victor Alves Abreu", SCREEN_W - 20, SCREEN_H - 40, makecol(255, 255, 255));
-      textout_right(buffer, font, "copyright © 2016 - Free Education License", SCREEN_W - 20, SCREEN_H - 20, makecol(255, 255, 255));
+      textout_right(buffer, font, "copyright © 2016 - GNU GENERAL PUBLIC LICENSE", SCREEN_W - 20, SCREEN_H - 20, makecol(255, 255, 255));
       draw_sprite(screen, buffer, 0, 0);
       //clear_to_color(screen, makecol(0, 0, 0));
     }

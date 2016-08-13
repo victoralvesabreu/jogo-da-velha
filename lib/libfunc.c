@@ -1,16 +1,5 @@
 #include "libfunc.h"
 
-
-void incrementa_ticks() {
-  ticks++;
-}
-END_OF_FUNCTION(incrementa_ticks);
-
-void fechar_programa(int exit_program) {
-  exit_program = TRUE;
-}
-END_OF_FUNCTION(fechar_programa);
-
 void escreverMatriz(int i, int u){
   while (i<3) {
     while(u<3){
