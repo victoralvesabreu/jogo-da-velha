@@ -6,48 +6,9 @@
 */
 #include "allegro.h"
 #include <stdio.h>
-
-#define BOLINHA 1
-#define XISZINHO 2
-#define NENHUM 0
-#define TURNOB 0
-#define TURNOX 1
-#define EMPATE 3
-
+#include "lib/libfunc.h"
 
 volatile int exit_program = FALSE;
-
-volatile int ticks;
-
-void incrementa_ticks() {
-  ticks++;
-}
-END_OF_FUNCTION(incrementa_ticks);
-
-void fechar_programa() {
-  exit_program = TRUE;
-}
-END_OF_FUNCTION(fechar_programa)
-
-typedef struct {
-  int pos_x, pos_y, estado, id;
-}Base;
-
-
-Base base[3][3];
-
-void escreverMatriz(int i, int u){
-  while (i<3) {
-    while(u<3){
-      base[i][u].estado = NENHUM;
-      base[i][u].pos_y = SCREEN_H / 4 + ((SCREEN_H / 6) * u);
-      base[i][u].pos_x = SCREEN_W / 4 + ((SCREEN_W / 6) * i) + 20;
-      u++;
-    }
-    i++;
-    u = 0;
-  }
-}
 
 
 int main() {
@@ -70,7 +31,6 @@ int main() {
   int coresMatriz = makecol(0, 255, 255), turno = TURNOB, partida = TRUE;
   int estadoTeclaDireita, estadoTeclaEsquerda, estadoTeclaSubir;
   int estadoTeclaDescer, estadoTeclaEspaco, estadoTeclaEnter1, estadoTeclaEnter2;
-
   //fim Declaração de variaves comuns
 
 
