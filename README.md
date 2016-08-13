@@ -2,6 +2,8 @@
 
 Jogo feito em C usando a biblioteca allegro.h 
 
+![alt tag](https://github.com/victoralvesabreu/jogo-da-velha/blob/master/img/JogoDaVelha.png)
+
 ## instalação biblioteca allegro
 Para compilar precisa ter instalado os pacote gcc e liballegro-dev e make
 ### no ubuntu
